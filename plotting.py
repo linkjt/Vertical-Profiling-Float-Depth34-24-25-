@@ -50,9 +50,9 @@ def update(frame):
     global pCounter
     if flag:
         counter += 1
-        times.append(counter)  # Corrected to append a new value
+        times.append(counter)  
         pCounter += 1
-        pressures.append(pCounter)  # Corrected to append a new value
+        pressures.append(pCounter) 
     else:
         response = requests.get(url)
         # Response will be a JSON file
@@ -62,8 +62,8 @@ def update(frame):
             time = items_list[-1][0]
             pressure = items_list[-1][1]
             pressure *= consts[unit]
-            times.append(time)  # Corrected to append a new value
-            pressures.append(pressure)  # Corrected to append a new value
+            times.append(time) 
+            pressures.append(pressure)  
         else:
             sys.exit("Server error [Can't receive data]")
     
@@ -84,7 +84,7 @@ def update2(frame):
     global dCounter
     if flag:
         dCounter += 10
-        distances.append(dCounter)  # Corrected to append a new value
+        distances.append(dCounter) 
     else:
         response = requests.get(url)
         # Response will be a JSON file
