@@ -5,7 +5,6 @@ from AppKit import NSApplication, NSApp, NSWorkspace
 from Quartz import kCGWindowListOptionOnScreenOnly, kCGNullWindowID, CGWindowListCopyWindowInfo
 
 
-# Your plotting code here
 plt.plot([1, 2, 3], [4, 5, 6])
 plt.show()
 
@@ -22,5 +21,4 @@ for app in activeApps:
                 print(window.getKeys_)
                 break
         break
-# Maximize the window after it opens
 pyautogui.hotkey('command', 'option', 'f') 
